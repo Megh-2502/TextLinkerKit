@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TextLinkerView - Comprehensive XML Attributes -->
+    <declare-styleable name="TextLinkerView">
+
+        <!-- ========== DETECTION CONTROLS ========== -->
+        <!-- Enable/Disable detection for each type -->
+        <attr name="tl_detectUrls" format="boolean" />
+        <attr name="tl_detectEmails" format="boolean" />
+        <attr name="tl_detectPhones" format="boolean" />
+
+        <!-- Auto-detect when text changes -->
+        <attr name="tl_autoDetect" format="boolean" />
+
+        <!-- ========== TEXT COLORS ========== -->
+        <!-- Individual colors for each link type -->
+        <attr name="tl_urlColor" format="color" />
+        <attr name="tl_emailColor" format="color" />
+        <attr name="tl_phoneColor" format="color" />
+
+        <!-- ========== UNDERLINE STYLING ========== -->
+        <!-- Enable/disable underline for each type -->
+        <attr name="tl_urlUnderline" format="boolean" />
+        <attr name="tl_emailUnderline" format="boolean" />
+        <attr name="tl_phoneUnderline" format="boolean" />
+
+        <!-- ========== INTERACTION BEHAVIOR ========== -->
+        <!-- Highlight color when link is pressed -->
+        <attr name="tl_pressHighlightColor" format="color" />
+
+        <!-- Enable press highlight effect -->
+        <attr name="tl_enablePressHighlight" format="boolean" />
+
+        <!-- Enable long press detection -->
+        <attr name="tl_enableLongPress" format="boolean" />
+
+        <!-- Long press duration in milliseconds -->
+        <attr name="tl_longPressDuration" format="integer" />
+
+        <!-- ========== CLICK ACTION CONTROLS ========== -->
+        <!-- Enable/disable click actions -->
+        <attr name="tl_enableUrlClick" format="boolean" />
+        <attr name="tl_enableEmailClick" format="boolean" />
+        <attr name="tl_enablePhoneClick" format="boolean" />
+
+        <!-- ========== CUSTOM REGEX OVERRIDES ========== -->
+        <!-- Custom regex patterns (advanced) -->
+        <attr name="tl_customUrlRegex" format="string" />
+        <attr name="tl_customEmailRegex" format="string" />
+        <attr name="tl_customPhoneRegex" format="string" />
+
+        <!-- ========== TEXT FORMATTING ========== -->
+        <!-- Make links bold -->
+        <attr name="tl_linksBold" format="boolean" />
+
+        <!-- Make links italic -->
+        <attr name="tl_linksItalic" format="boolean" />
+
+        <!-- ========== EDGE CASE HANDLING ========== -->
+        <!-- Strip trailing punctuation from links -->
+        <attr name="tl_stripTrailingPunctuation" format="boolean" />
+
+        <!-- Detect links in already spannable text -->
+        <attr name="tl_detectInSpannableText" format="boolean" />
+
+        <!-- ========== ACCESSIBILITY ========== -->
+        <!-- Add content description to links -->
+        <attr name="tl_addAccessibilityHints" format="boolean" />
+
+    </declare-styleable>
+</resources>

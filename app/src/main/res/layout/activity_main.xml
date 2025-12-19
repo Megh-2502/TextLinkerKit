@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:overScrollMode="never"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ========== HEADER ========== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="TextLinker Library Demo"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Tap any detected link to open it"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <!-- ========== EXAMPLE 1: DEFAULT CONFIGURATION ========== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="1️⃣ Default Configuration"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.ext.text_linker.TextLinkerView
+            android:id="@+id/textLinkerDefault"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#F5F5F5"
+            android:padding="12dp"
+            android:text="Visit https://google.com or www.github.com for code samples. Email us at support@example.com or call +91 9876543210 for help."
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:tl_autoDetect="true"
+            app:tl_detectEmails="true"
+            app:tl_detectPhones="true"
+            app:tl_detectUrls="true" />
+
+        <!-- ========== EXAMPLE 2: CUSTOM COLORS ========== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="2️⃣ Custom Colors (Red URLs, Green Emails, Orange Phones)"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.ext.text_linker.TextLinkerView
+            android:id="@+id/textLinkerColors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#F5F5F5"
+            android:padding="12dp"
+            android:text="Check out openai.com and contact hello@openai.com or dial 1-800-555-0199 today!"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:tl_autoDetect="true"
+            app:tl_detectEmails="true"
+            app:tl_detectPhones="true"
+            app:tl_detectUrls="true"
+            app:tl_emailColor="#00AA00"
+            app:tl_phoneColor="#FF8800"
+            app:tl_urlColor="#FF0000" />
+
+        <!-- ========== EXAMPLE 3: NO UNDERLINES ========== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="3️⃣ No Underlines"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.ext.text_linker.TextLinkerView
+            android:id="@+id/textLinkerNoUnderline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#F5F5F5"
+            android:padding="12dp"
+            android:text="Links without underlines: www.wikipedia.org and info@example.org and (555) 123-4567"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:tl_autoDetect="true"
+            app:tl_detectEmails="true"
+            app:tl_detectPhones="true"
+            app:tl_detectUrls="true"
+            app:tl_emailUnderline="false"
+            app:tl_phoneUnderline="false"
+            app:tl_urlUnderline="false" />
+
+        <!-- ========== EXAMPLE 4: BOLD & ITALIC LINKS ========== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="4️⃣ Bold &amp; Italic Links"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.ext.text_linker.TextLinkerView
+            android:id="@+id/textLinkerBoldItalic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#F5F5F5"
+            android:padding="12dp"
+            android:text="Styled links: https://stackoverflow.com, admin@site.com, 123-456-7890"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:tl_autoDetect="true"
+            app:tl_detectEmails="true"
+            app:tl_detectPhones="true"
+            app:tl_detectUrls="true"
+            app:tl_linksBold="true"
+            app:tl_linksItalic="true" />
+
+        <!-- ========== EXAMPLE 5: ONLY URLS ========== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="5️⃣ Only URLs (Emails &amp; Phones Disabled)"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.ext.text_linker.TextLinkerView
+            android:id="@+id/textLinkerUrlsOnly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#F5F5F5"
+            android:padding="12dp"
+            android:text="Only URLs are clickable: www.reddit.com but test@email.com and 9876543210 are not."
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:tl_autoDetect="true"
+            app:tl_detectEmails="false"
+            app:tl_detectPhones="false"
+            app:tl_detectUrls="true"
+            app:tl_urlColor="#0066CC" />
+
+        <!-- ========== EXAMPLE 6: ONLY EMAILS ========== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="6️⃣ Only Emails"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.ext.text_linker.TextLinkerView
+            android:id="@+id/textLinkerEmailsOnly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#F5F5F5"
+            android:padding="12dp"
+            android:text="Only emails work: contact@company.com. URLs like google.com and phones like 555-1234 don't."
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:tl_autoDetect="true"
+            app:tl_detectEmails="true"
+            app:tl_detectPhones="false"
+            app:tl_detectUrls="false"
+            app:tl_emailColor="#DD4814" />
+
+        <!-- ========== EXAMPLE 7: ONLY PHONES ========== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="7️⃣ Only Phone Numbers"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.ext.text_linker.TextLinkerView
+            android:id="@+id/textLinkerPhonesOnly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#F5F5F5"
+            android:padding="12dp"
+            android:text="Call us: +1 (555) 987-6543 or 123-456-7890. Email sales@example.com won't work."
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:tl_autoDetect="true"
+            app:tl_detectEmails="false"
+            app:tl_detectPhones="true"
+            app:tl_detectUrls="false"
+            app:tl_phoneColor="#117711" />
+
+        <!-- ========== EXAMPLE 8: MIXED CONTENT ========== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="8️⃣ Mixed Content (All Types)"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.ext.text_linker.TextLinkerView
+            android:id="@+id/textLinkerMixed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#F5F5F5"
+            android:padding="12dp"
+            android:text="Complex example: Visit https://www.amazon.com for shopping, email support@amazon.com for queries, or call +1-888-280-4331 for immediate help. Also check out www.ebay.com!"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:tl_autoDetect="true"
+            app:tl_detectEmails="true"
+            app:tl_detectPhones="true"
+            app:tl_detectUrls="true"
+            app:tl_emailColor="#00897B"
+            app:tl_phoneColor="#E65100"
+            app:tl_urlColor="#6A1B9A" />
+
+        <!-- ========== EXAMPLE 9: DISABLED CLICKS ========== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="9️⃣ Links Styled But Not Clickable"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.ext.text_linker.TextLinkerView
+            android:id="@+id/textLinkerNoClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#F5F5F5"
+            android:padding="12dp"
+            android:text="These are styled but won't open: www.example.com, test@test.com, 555-0100"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:tl_autoDetect="true"
+            app:tl_detectEmails="true"
+            app:tl_detectPhones="true"
+            app:tl_detectUrls="true"
+            app:tl_emailColor="#AAAAAA"
+            app:tl_enableEmailClick="false"
+            app:tl_enablePhoneClick="false"
+            app:tl_enableUrlClick="false"
+            app:tl_phoneColor="#AAAAAA"
+            app:tl_urlColor="#AAAAAA" />
+
+        <!-- ========== EXAMPLE 10: PROGRAMMATIC CUSTOMIZATION ========== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="🔟 Runtime Customization (via Kotlin)"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.ext.text_linker.TextLinkerView
+            android:id="@+id/textLinkerCustom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#F5F5F5"
+            android:padding="12dp"
+            android:text="This view's settings are modified in MainActivity.kt. Visit github.com and call 555-1234."
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:tl_autoDetect="true"
+            app:tl_detectEmails="true"
+            app:tl_detectPhones="true"
+            app:tl_detectUrls="true" />
+
+        <!-- ========== EXAMPLE 11: MANUAL DETECTION ========== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="1️⃣1️⃣ Manual Detection (Auto-Detect Off)"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.ext.text_linker.TextLinkerView
+            android:id="@+id/textLinkerManual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="#F5F5F5"
+            android:padding="12dp"
+            android:text="Text set programmatically in MainActivity"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:tl_autoDetect="false"
+            app:tl_detectEmails="true"
+            app:tl_detectPhones="true"
+            app:tl_detectUrls="true" />
+
+    </LinearLayout>
+
+</ScrollView>
