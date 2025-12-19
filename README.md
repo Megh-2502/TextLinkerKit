@@ -1,7 +1,7 @@
 # TextLinker - Auto Link Detection Library
 
-[![Kotlin](https://img.shields.io/badge/Kotlin-1.9-blue?logo=kotlin&logoColor=white)](https://kotlinlang.org)\
-[![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)\
+[![Kotlin](https://img.shields.io/badge/Kotlin-1.9-blue?logo=kotlin&logoColor=white)](https://kotlinlang.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![API](https://img.shields.io/badge/API-21%2B-orange)](#)
 [![](https://jitpack.io/v/Excelsior-Technologies-Community/TextLinkerKit.svg)](https://jitpack.io/#Excelsior-Technologies-Community/TextLinkerKit)
 
