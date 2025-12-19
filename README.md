@@ -11,7 +11,10 @@
 
 ## 📸 Preview
 
-<img src="app/src/main/assets/Video.gif"
+<img src="app/src/main/assets/img1.png"
+       alt="Text Linker Kit Library Demo" 
+      height="320"/>
+<img src="app/src/main/assets/img2.png"
        alt="Text Linker Kit Library Demo" 
       height="320"/>
 
